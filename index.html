@@ -1,24 +1,649 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="style.css">
-    <title>M</title>
-</head>
-<body>
-    <img src="">
-    <h2>modificacion de gits
-        
-    </h2>
 
-    <h1>1,2,3 probando</h1>
-    <h2>tienda web---</h2>
-    <nav>
-        <a href="">Catalogo</a>
-        <a href="">Acerca de</a>
-        
-    </nav>
-</body>
+<!DOCTYPE html>
+<html class="client-nojs" lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Singleton - Wikipedia, la enciclopedia libre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Singleton","wgTitle":"Singleton","wgCurRevisionId":111190596,"wgRevisionId":111190596,"wgArticleId":55325,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia:Artículos con enlaces externos rotos","Patrones de diseño"],"wgBreakFrames":false,"wgPageContentLanguage":"es","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"wgMonthNamesShort":["","ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"],"wgRelevantPageName":"Singleton","wgRelevantArticleId":55325,"wgRequestId":"W@xLDgpAICkAADL-PFIAAAAJ","wgCSPNonce":false,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikiEditorEnabledModules":[],"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsShouldSendModuleToUser":true,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"es","pageLanguageDir":"ltr","pageVariantFallbacks":"es","usePageImages":true,"usePageDescriptions":true},"wgMFExpandAllSectionsUserOption":true,"wgMFEnableFontChanger":true,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgWMESchemaEditAttemptStepOversample":false,"wgULSCurrentAutonym":"español","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgWikibaseItemId":"Q746699","wgScoreNoteLanguages":{"arabic":"العربية","catalan":"català","deutsch":"Deutsch","english":"English","espanol":"español","italiano":"italiano","nederlands":"Nederlands","norsk":"norsk","portugues":"português","suomi":"suomi","svenska":"svenska","vlaams":"West-Vlams"},"wgScoreDefaultNoteLanguage":"nederlands","wgCentralAuthMobileDomain":false,"wgCodeMirrorEnabled":true,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":true});mw.loader.state({"ext.gadget.imagenesinfobox":"ready","ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.pygments":"ready","ext.cite.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","ext.3d.styles":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@00wq302",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"es"});
+});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["ext.cite.a11y","site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.a-commons-directo","ext.gadget.ReferenceTooltips","ext.gadget.refToolbar","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interface","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"];mw.loader.load(RLPAGEMODULES);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=es&amp;modules=ext.3d.styles%7Cext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=es&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=es&amp;modules=ext.gadget.imagenesinfobox&amp;only=styles&amp;skin=vector"/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=es&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<noscript><link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=es&amp;modules=noscript&amp;only=styles&amp;skin=vector"/></noscript>
+<meta name="generator" content="MediaWiki 1.33.0-wmf.3"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Singleton_UML_class_diagram.svg/1200px-Singleton_UML_class_diagram.svg.png"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/es.m.wikipedia.org/wiki/Singleton"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Singleton&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Singleton&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (es)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//es.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://es.wikipedia.org/wiki/Singleton"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=es&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Singleton rootpage-Singleton skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div><div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="es">Singleton</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">De Wikipedia, la enciclopedia libre</div>				<div id="contentSub"></div>
+				<div id="jump-to-nav"></div>				<a class="mw-jump-link" href="#mw-head">Ir a la navegación</a>
+				<a class="mw-jump-link" href="#p-search">Ir a la búsqueda</a>
+				<div id="mw-content-text" lang="es" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="rellink noprint"> Para el término matemático, véase <a href="/wiki/Conjunto_unitario" title="Conjunto unitario">Conjunto unitario</a>.</div>
+<div class="thumb tright"><div class="thumbinner" style="width:252px;"><a href="/wiki/Archivo:Singleton_UML_class_diagram.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Singleton_UML_class_diagram.svg/250px-Singleton_UML_class_diagram.svg.png" width="250" height="150" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Singleton_UML_class_diagram.svg/375px-Singleton_UML_class_diagram.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Singleton_UML_class_diagram.svg/500px-Singleton_UML_class_diagram.svg.png 2x" data-file-width="500" data-file-height="300" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/Archivo:Singleton_UML_class_diagram.svg" class="internal" title="Aumentar"></a></div>Diagrama <a href="/wiki/UML" class="mw-redirect" title="UML">UML</a> de una <a href="/wiki/Clase_(programaci%C3%B3n_orientada_a_objetos)" class="mw-redirect" title="Clase (programación orientada a objetos)">clase</a> que implementa el patrón singleton.</div></div></div>
+<p>En <a href="/wiki/Ingenier%C3%ADa_de_software" title="Ingeniería de software">ingeniería de <i>software</i></a>, <i><b>singleton</b></i> o <b>instancia única</b> es un <a href="/wiki/Patr%C3%B3n_de_dise%C3%B1o" title="Patrón de diseño">patrón de diseño</a> que permite restringir la creación de <a href="/wiki/Programaci%C3%B3n_orientada_a_objetos" title="Programación orientada a objetos">objetos</a> pertenecientes a una <a href="/wiki/Clase_(programaci%C3%B3n_orientada_a_objetos)" class="mw-redirect" title="Clase (programación orientada a objetos)">clase</a> o el valor de un tipo a un único objeto.
+</p><p>Su intención consiste en garantizar que una clase solo tenga una <a href="/wiki/Instancia_(inform%C3%A1tica)" title="Instancia (informática)">instancia</a> y proporcionar un punto de acceso global a ella.
+</p><p>El patrón <i>singleton</i> se implementa creando en nuestra clase un <a href="/wiki/M%C3%A9todo_(inform%C3%A1tica)" title="Método (informática)">método</a> que crea una instancia del objeto solo si todavía no existe alguna. Para asegurar que la clase no puede ser instanciada nuevamente se regula el alcance del <a href="/wiki/Constructor_(inform%C3%A1tica)" title="Constructor (informática)">constructor</a> (con <a href="/w/index.php?title=Modificador_de_acceso&amp;action=edit&amp;redlink=1" class="new" title="Modificador de acceso (aún no redactado)">modificadores de acceso</a> como protegido o privado).
+</p><p>La instrumentación del patrón puede ser delicada en programas con múltiples hilos de ejecución. Si dos <a href="/wiki/Hilo_(inform%C3%A1tica)" title="Hilo (informática)">hilos de ejecución</a> intentan crear la instancia al mismo tiempo y esta no existe todavía, solo uno de ellos debe lograr crear el objeto. La solución clásica para este problema es utilizar <a href="/wiki/Exclusi%C3%B3n_mutua_(inform%C3%A1tica)" title="Exclusión mutua (informática)">exclusión mutua</a> en el método de creación de la clase que implementa el patrón.
+</p><p>Las situaciones más habituales de aplicación de este patrón son aquellas en las que dicha clase controla el acceso a un recurso físico único (como puede ser el <a href="/wiki/Rat%C3%B3n_(inform%C3%A1tica)" title="Ratón (informática)">ratón</a> o un archivo abierto en modo exclusivo) o cuando cierto <a href="/wiki/Tipo_de_datos" class="mw-redirect" title="Tipo de datos">tipo de datos</a> debe estar disponible para todos los demás objetos de la <a href="/wiki/Aplicaci%C3%B3n_(inform%C3%A1tica)" class="mw-redirect" title="Aplicación (informática)">aplicación</a>.
+</p><p>El patrón <i>singleton</i> provee una única instancia global gracias a que:
+</p>
+<ul><li>La propia clase es responsable de crear la única instancia.</li>
+<li>Permite el acceso global a dicha instancia mediante un método de clase.</li>
+<li>Declara el constructor de clase como privado para que no sea instanciable directamente.</li>
+<li>Al estar internamente autoreferenciada, en lenguajes como Java, el recolector de basura no actúa.</li></ul>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="es" dir="ltr"><h2>Índice</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Ejemplo_de_implementación"><span class="tocnumber">1</span> <span class="toctext">Ejemplo de implementación</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#ActionScript_3"><span class="tocnumber">1.1</span> <span class="toctext">ActionScript 3</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Autoit"><span class="tocnumber">1.2</span> <span class="toctext">Autoit</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#C#"><span class="tocnumber">1.3</span> <span class="toctext">C#</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#C++"><span class="tocnumber">1.4</span> <span class="toctext">C++</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#D"><span class="tocnumber">1.5</span> <span class="toctext">D</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Delphi"><span class="tocnumber">1.6</span> <span class="toctext">Delphi</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Java"><span class="tocnumber">1.7</span> <span class="toctext">Java</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Javascript"><span class="tocnumber">1.8</span> <span class="toctext">Javascript</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Objective_C"><span class="tocnumber">1.9</span> <span class="toctext">Objective C</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Perl"><span class="tocnumber">1.10</span> <span class="toctext">Perl</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#PHP5"><span class="tocnumber">1.11</span> <span class="toctext">PHP5</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Python"><span class="tocnumber">1.12</span> <span class="toctext">Python</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Visual_Basic._NET"><span class="tocnumber">1.13</span> <span class="toctext">Visual Basic. NET</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Patrones_relacionados"><span class="tocnumber">2</span> <span class="toctext">Patrones relacionados</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Enlaces_externos"><span class="tocnumber">3</span> <span class="toctext">Enlaces externos</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Referencias"><span class="tocnumber">4</span> <span class="toctext">Referencias</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Ejemplo_de_implementaci.C3.B3n"></span><span class="mw-headline" id="Ejemplo_de_implementación">Ejemplo de implementación</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=1" title="Editar sección: Ejemplo de implementación">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="ActionScript_3">ActionScript 3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=2" title="Editar sección: ActionScript 3">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Una implementación del patrón singleton en <a href="/wiki/ActionScript" title="ActionScript">ActionScript</a> es la siguiente:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nx">Singleton</span><span class="p">{</span>
+   <span class="kd">private</span> <span class="kd">static</span> <span class="k">var</span> <span class="nx">instance</span><span class="o">:</span><span class="nx">Singleton</span><span class="o">;</span>
+   <span class="kd">private</span> <span class="kd">static</span> <span class="k">var</span> <span class="nx">allowInstance</span><span class="o">:</span><span class="nb">Boolean</span><span class="o">;</span>
+   <span class="kd">public</span> <span class="kd">function</span> <span class="nx">Singleton</span><span class="p">(){</span>
+      <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">allowInstance</span><span class="p">){</span>
+         <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&quot;Debes usar getInstance()&quot;</span><span class="p">);</span>	
+      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+         <span class="nf">trace</span><span class="p">(</span><span class="s2">&quot;Se inicializó una instancia de Singleton&quot;</span><span class="p">);</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+		
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kd">function</span> <span class="nx">getInstance</span><span class="p">()</span><span class="o">:</span><span class="nx">Singleton</span><span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">instance</span><span class="o">==</span><span class="kc">null</span><span class="p">){</span>
+         <span class="nx">allowInstance</span><span class="o">=</span><span class="kc">true</span><span class="o">;</span>
+         <span class="nx">instance</span><span class="o">=</span> <span class="k">new</span> <span class="nx">Singleton</span><span class="p">();</span>
+         <span class="nx">allowInstance</span><span class="o">=</span><span class="kc">false</span><span class="o">;</span>			
+      <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+         <span class="nf">trace</span><span class="p">(</span><span class="s2">&quot;Se regresa la instancia existente&quot;</span><span class="p">);</span>	
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="nx">instance</span><span class="o">;</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Autoit">Autoit</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=3" title="Editar sección: Autoit">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Una implementación del patrón singleton en <a href="/wiki/Autoit" class="mw-redirect" title="Autoit">Autoit</a> es la siguiente:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">#include</span> <span class="o">&lt;</span><span class="n">Misc</span><span class="o">.</span><span class="n">au3</span><span class="o">&gt;</span>
+<span class="nb">if</span> <span class="n">_Singleton</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="nb">Then</span>
+    <span class="nf">Msgbox</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Warning&quot;</span><span class="p">,</span><span class="s">&quot;An occurence of test is already running&quot;</span><span class="p">)</span>
+    <span class="nb">Exit</span>
+<span class="nb">EndIf</span>
+<span class="nf">Msgbox</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="s">&quot;the first occurence of test is running&quot;</span><span class="p">)</span>
+</pre></div>
+<h3><span id="C.23"></span><span class="mw-headline" id="C#">C#</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=4" title="Editar sección: C#">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Un ejemplo <b>correcto</b> de inicialización diferida y segura en entornos multi-hilo en <a href="/wiki/C_Sharp" title="C Sharp">C#</a> sería:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">Singleton</span>
+<span class="p">{</span>
+    <span class="c1">// Variable estática para la instancia, se necesita utilizar una función lambda ya que el constructor es privado</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">Singleton</span><span class="p">&gt;</span> <span class="n">instance</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">Singleton</span><span class="p">&gt;(()</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">Singleton</span><span class="p">());</span>
+
+    <span class="c1">// Constructor privado para evitar la instanciación directa</span>
+    <span class="k">private</span> <span class="nf">Singleton</span><span class="p">()</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Propiedad para acceder a la instancia</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="n">Singleton</span> <span class="n">Instance</span>
+    <span class="p">{</span>
+        <span class="k">get</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">instance</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Clase de prueba</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Prueba</span>
+<span class="p">{</span>
+   <span class="k">private</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+   <span class="p">{</span>
+     <span class="c1">//Singleton s0 = new Singleton();  //Error</span>
+     <span class="n">Singleton</span> <span class="n">s1</span> <span class="p">=</span> <span class="n">Singleton</span><span class="p">.</span><span class="n">Instance</span><span class="p">;</span>
+     <span class="n">Singleton</span> <span class="n">s2</span> <span class="p">=</span> <span class="n">Singleton</span><span class="p">.</span><span class="n">Instance</span><span class="p">;</span>
+     <span class="k">if</span><span class="p">(</span><span class="n">s1</span><span class="p">==</span><span class="n">s2</span><span class="p">)</span>
+     <span class="p">{</span>
+       <span class="c1">// Misma instancia</span>
+     <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span id="C.2B.2B"></span><span class="mw-headline" id="C++">C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=5" title="Editar sección: C++">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Una solución posible en <a href="/wiki/C%2B%2B" title="C++">C++</a> (conocida como el singleton de Meyers) en la cual el singleton es un objeto local estático (notar que esta solución no es segura en programas multi-hilo):
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">Singleton</span>
+<span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="k">static</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">Instance</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">static</span> <span class="n">T</span> <span class="n">laInstanciaSingleton</span><span class="p">;</span> <span class="c1">//asumir T posee un constructor por defecto</span>
+            <span class="k">return</span> <span class="n">laInstanciaSingleton</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Singleton</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Singleton</span><span class="o">&lt;</span><span class="n">Singleton</span><span class="o">&gt;</span>
+<span class="p">{</span>
+     <span class="k">friend</span> <span class="k">class</span> <span class="nc">Singleton</span><span class="o">&lt;</span><span class="n">Singleton</span><span class="o">&gt;</span><span class="p">;</span> <span class="c1">//para dar acceso al constructor privado de SoloUno</span>
+     <span class="c1">//..definir aquí el resto de la interfaz</span>
+<span class="p">};</span>
+</pre></div>
+<h3><span class="mw-headline" id="D">D</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=6" title="Editar sección: D">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Una posible implementación en <a href="/wiki/D_(lenguaje_de_programaci%C3%B3n)" title="D (lenguaje de programación)">D</a> sería:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">final</span> <span class="k">class</span> <span class="n">Singleton</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="n">Singleton</span> <span class="n">instance</span><span class="p">;</span>
+
+    <span class="k">static</span> <span class="k">this</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">instance</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">static</span> <span class="n">Singleton</span> <span class="n">opCall</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">instance</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">auto</span> <span class="n">s1</span> <span class="p">=</span> <span class="n">Singleton</span><span class="p">();</span>
+<span class="k">auto</span> <span class="n">s2</span> <span class="p">=</span> <span class="n">Singleton</span><span class="p">();</span>
+
+<span class="k">assert</span><span class="p">(</span><span class="n">s1</span> <span class="p">==</span> <span class="n">s2</span><span class="p">);</span>
+</pre></div>
+<h3><span class="mw-headline" id="Delphi">Delphi</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=7" title="Editar sección: Delphi">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Esta implementación ha sido sacada de <a rel="nofollow" class="external autonumber" href="http://edn.embarcadero.com/article/22576">[1]</a> y está basada en la sobreescritura de los métodos <b>NewInstance</b> y <b>FreeInstance</b> que se hereda de la clase TObject, la madre de todos los objetos en <a href="/wiki/Embarcadero_Delphi" title="Embarcadero Delphi">Embarcadero Delphi</a>.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">type</span>
+  <span class="n">TSingleton</span> <span class="o">=</span> <span class="k">class</span>
+  <span class="kp">public</span>
+    <span class="k">class</span> <span class="k">function</span> <span class="nf">NewInstance</span><span class="o">:</span> <span class="kt">TObject</span><span class="o">;</span> <span class="kp">override</span><span class="o">;</span>
+    <span class="k">procedure</span> <span class="nf">FreeInstance</span><span class="o">;</span> <span class="kp">override</span><span class="o">;</span>
+    <span class="k">class</span> <span class="k">function</span> <span class="nf">RefCount</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+<span class="k">var</span>
+  <span class="n">Instance</span>  <span class="o">:</span> <span class="n">TSingleton</span>  <span class="o">=</span> <span class="k">nil</span><span class="o">;</span>
+  <span class="n">Ref_Count</span> <span class="o">:</span> <span class="kt">Integer</span>     <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</pre></div>
+<p>Y su implementación sería así:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">procedure</span> <span class="nc">TSingleton</span><span class="o">.</span><span class="nf">FreeInstance</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="nb">Dec</span><span class="p">(</span> <span class="n">Ref_Count</span> <span class="p">)</span><span class="o">;</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">Ref_Count</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+  <span class="k">begin</span>
+    <span class="n">Instance</span> <span class="o">:=</span> <span class="k">nil</span><span class="o">;</span>
+    <span class="c1">// Destroy private variables here</span>
+    <span class="k">inherited</span> <span class="n">FreeInstance</span><span class="o">;</span>
+  <span class="k">end</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">class</span> <span class="k">function</span> <span class="nc">TSingleton</span><span class="o">.</span><span class="nf">NewInstance</span><span class="o">:</span> <span class="kt">TObject</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="k">not</span> <span class="nb">Assigned</span><span class="p">(</span> <span class="n">Instance</span> <span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
+  <span class="k">begin</span>
+    <span class="n">Instance</span> <span class="o">:=</span> <span class="k">inherited</span> <span class="n">NewInstance</span><span class="o">;</span>
+    <span class="c1">// Initialize private variables here, like this:</span>
+    <span class="c1">//   TSingleton(Result).Variable := Value;</span>
+  <span class="k">end</span><span class="o">;</span>
+  <span class="bp">Result</span> <span class="o">:=</span> <span class="n">Instance</span>
+  <span class="nb">Inc</span><span class="p">(</span> <span class="n">Ref_Count</span> <span class="p">)</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">class</span> <span class="k">function</span> <span class="nc">TSingleton</span><span class="o">.</span><span class="nf">RefCount</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+<span class="k">begin</span>
+  <span class="bp">Result</span> <span class="o">:=</span> <span class="n">Ref_Count</span><span class="o">;</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Java">Java</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=8" title="Editar sección: Java">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>La implementación <b>más usual</b> en el <a href="/wiki/Lenguaje_de_programaci%C3%B3n_Java" class="mw-redirect" title="Lenguaje de programación Java">lenguaje de programación Java</a> es la siguiente:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Singleton</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Singleton</span> <span class="n">INSTANCE</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="o">();</span>
+
+    <span class="c1">// El constructor privado no permite que se genere un constructor por defecto.</span>
+    <span class="c1">// (con mismo modificador de acceso que la definición de la clase) </span>
+    <span class="kd">private</span> <span class="nf">Singleton</span><span class="o">()</span> <span class="o">{}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Singleton</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">INSTANCE</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Un ejemplo <b>correcto</b> de inicialización diferida. Se deja para comentar un error común en Java al no tener en cuenta la sincronización de métodos.
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Singleton</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">Singleton</span> <span class="n">INSTANCE</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+    <span class="c1">// Private constructor suppresses </span>
+    <span class="kd">private</span> <span class="nf">Singleton</span><span class="o">(){}</span>
+
+    <span class="c1">// creador sincronizado para protegerse de posibles problemas  multi-hilo</span>
+    <span class="c1">// otra prueba para evitar instanciación múltiple </span>
+    <span class="kd">private</span> <span class="kd">synchronized</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">createInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">INSTANCE</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span> 
+            <span class="n">INSTANCE</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Singleton</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">INSTANCE</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="n">createInstance</span><span class="o">();</span>
+        <span class="k">return</span> <span class="n">INSTANCE</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Si queremos reducir el coste de la sincronización, se realiza la comprobación de la instancia antes de invocar el método "createInstance"; también es posible hacerlo en un único método de la siguiente manera <a rel="nofollow" class="external autonumber" href="http://www.ibm.com/developerworks/java/library/j-dcl/index.html">[2]</a>:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span>    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">createInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">INSTANCE</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// Solo se accede a la zona sincronizada</span>
+            <span class="c1">// cuando la instancia no está creada</span>
+            <span class="kd">synchronized</span><span class="o">(</span><span class="n">Singleton</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// En la zona sincronizada sería necesario volver</span>
+                <span class="c1">// a comprobar que no se ha creado la instancia</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">INSTANCE</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span> 
+                    <span class="n">INSTANCE</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</pre></div>
+<p>Para asegurar que se cumpla el requerimiento de "única instancia" del singleton; la clase debería producir un objeto no clonable:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">//Así se podría clonar el objeto y no tendría unicidad.</span>
+<span class="n">SingletonObjectDemo</span> <span class="n">clonedObject</span> <span class="o">=</span> <span class="o">(</span><span class="n">SingletonObjectDemo</span><span class="o">)</span> <span class="n">obj</span><span class="o">.</span><span class="na">clone</span><span class="o">();</span>
+</pre></div>
+<p>Entonces, se debería impedir la clonación sobreescribiendo el método "clone" de la siguiente manera:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">//El método &quot;clone&quot; es sobreescrito por el siguiente que arroja una excepción:</span>
+<span class="kd">public</span> <span class="n">Object</span> <span class="nf">clone</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">CloneNotSupportedException</span> <span class="o">{</span>
+    	<span class="k">throw</span> <span class="k">new</span> <span class="n">CloneNotSupportedException</span><span class="o">();</span> 
+<span class="o">}</span>
+</pre></div>
+<p>Otra cuestión a tener en cuenta es que los métodos (o la clase) deberían ser declarados como: <i><b>final</b></i> para que no puedan ser sobreescritos.
+</p><p>
+Existe otra implementación menos conocida, pero con mayores ventajas dentro de Java que es la siguiente:</p><div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">public</span> <span class="kd">enum</span> <span class="n">SingletonEnum</span> <span class="o">{</span>
+    <span class="n">INSTANCE</span><span class="o">;</span>
+    
+    <span class="kt">int</span> <span class="n">value</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getValue</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">value</span><span class="o">;</span>
+    <span class="o">}</span>
+    
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setValue</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<p>Este enfoque es thread-safe y serializable, garantizado por la implementación de enum.
+</p><p>
+Ejemplo de uso:</p><div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">EnumDemo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">SingletonEnum</span> <span class="n">singleton</span> <span class="o">=</span> <span class="n">SingletonEnum</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">;</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">singleton</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
+        <span class="n">singleton</span><span class="o">.</span><span class="na">setValue</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">singleton</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Javascript">Javascript</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=9" title="Editar sección: Javascript">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Una implementación del patrón singleton en <a href="/wiki/Javascript" class="mw-redirect" title="Javascript">Javascript</a> es la siguiente:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="nx">Singleton</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">Singleton$constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> 
+        <span class="nx">getInstance</span> <span class="o">:</span> <span class="kd">function</span> <span class="nx">Singleton$getInstance</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+<span class="p">}();</span>
+</pre></div>
+<h3><span class="mw-headline" id="Objective_C">Objective C</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=10" title="Editar sección: Objective C">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Una sencilla implementación del patrón Singleton par el lenguaje <a href="/wiki/Objective_C" class="mw-redirect" title="Objective C">Objective C</a> es:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#import &quot;Singleton.h&quot;</span>
+ 
+<span class="k">@implementation</span> <span class="nc">Singleton</span>
+ 
+<span class="p">+(</span><span class="n">Singleton</span> <span class="o">*</span><span class="p">)</span> <span class="nf">getInstance</span><span class="p">{</span>
+    <span class="k">static</span>  <span class="n">Singleton</span><span class="o">*</span> <span class="n">singleton</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+    <span class="k">@synchronized</span><span class="p">(</span><span class="nb">self</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">singleton</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">singleton</span> <span class="o">=</span> <span class="p">[</span><span class="nb">self</span> <span class="n">new</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">singleton</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@end</span>
+</pre></div>
+<p>Otra forma mejor utilizando GCD es:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nf">sharedInstance</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="n">dispatch_once_t</span> <span class="n">pred</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">__strong</span> <span class="k">static</span> <span class="kt">id</span> <span class="n">_sharedObject</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+  <span class="n">dispatch_once</span><span class="p">(</span><span class="o">&amp;</span><span class="n">pred</span><span class="p">,</span> <span class="o">^</span><span class="p">{</span>
+    <span class="n">_sharedObject</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">self</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+  <span class="p">});</span>
+  <span class="k">return</span> <span class="n">_sharedObject</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Perl">Perl</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=11" title="Editar sección: Perl">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Como es habitual en <a href="/wiki/Perl" title="Perl">Perl</a>, hay más de un forma de hacerlo. De entre varias posibilidades,<sup id="cite_ref-1" class="reference separada"><a href="#cite_note-1"><span class="corchete-llamada">[</span>1<span class="corchete-llamada">]</span></a></sup>&#8203; podemos señalar esta:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="p">[</span><span class="n">Singleton</span><span class="o">.</span><span class="n">pm</span><span class="p">]</span>
+<span class="k">package</span> <span class="nn">Singleton</span><span class="p">;</span>
+
+<span class="k">my</span> <span class="nv">$singleton</span><span class="p">;</span>
+<span class="k">sub</span> <span class="nf">new</span> <span class="p">{</span>
+	<span class="k">my</span> <span class="nv">$class</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+	<span class="nv">$singleton</span> <span class="o">||=</span> <span class="nb">bless</span> <span class="p">{},</span> <span class="nv">$class</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">...</span>
+
+
+<span class="p">[</span><span class="n">foo</span><span class="o">.</span><span class="n">pl</span><span class="p">]</span>
+<span class="k">require</span> <span class="nn">Singleton</span><span class="p">;</span>
+
+<span class="k">my</span> <span class="nv">$object1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$object2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="p">;</span>	<span class="c1"># El mismo objeto</span>
+</pre></div>
+<h3><span class="mw-headline" id="PHP5">PHP5</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=12" title="Editar sección: PHP5">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Un ejemplo de implementación del patrón singleton en <a href="/w/index.php?title=PHP5&amp;action=edit&amp;redlink=1" class="new" title="PHP5 (aún no redactado)">PHP5</a> sería la siguiente:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">Singleton</span>
+<span class="p">{</span>
+    <span class="c1">// Contenedor Instancia de la clase</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="nv">$instance</span> <span class="o">=</span> <span class="k">NULL</span><span class="p">;</span>
+   
+    <span class="c1">// Constructor privado, previene la creación de objetos vía new</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+
+    <span class="c1">// Clone no permitido</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="fm">__clone</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+
+    <span class="c1">// Método singleton </span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">getInstance</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">is_null</span><span class="p">(</span><span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span><span class="p">))</span> <span class="p">{</span>
+            <span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Singleton</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nx">self</span><span class="o">::</span><span class="nv">$instance</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+<h3><span class="mw-headline" id="Python">Python</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=13" title="Editar sección: Python">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>El siguiente es un ejemplo de implementación de Singleton en <a href="/wiki/Python" title="Python">Python</a> (tampoco es segura en la programación multi-hilo):
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">class</span> <span class="nc">Singleton</span> <span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">instance</span> <span class="o">=</span> <span class="bp">None</span>       
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">):</span> 
+        <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">instance</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">instance</span> <span class="o">=</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">instance</span>
+
+<span class="c1">#Usage</span>
+<span class="n">mySingleton1</span> <span class="o">=</span> <span class="n">Singleton</span><span class="p">()</span>
+<span class="n">mySingleton2</span> <span class="o">=</span> <span class="n">Singleton</span><span class="p">()</span>
+ 
+<span class="c1">#mySingleton1 y mySingleton2 son la misma instancia</span>
+<span class="k">assert</span> <span class="n">mySingleton1</span> <span class="ow">is</span> <span class="n">mySingleton2</span>
+</pre></div>
+<p>Y otra posibilidad interesante es implementarlo como una metaclase:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">class</span> <span class="nc">Singleton</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">dct</span><span class="p">):</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">__instance</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="nb">type</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">dct</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__instance</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">__instance</span> <span class="o">=</span> <span class="nb">type</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__instance</span>
+
+<span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="vm">__metaclass__</span> <span class="o">=</span> <span class="n">Singleton</span>
+    <span class="c1"># Definir aquí el resto de la interfaz</span>
+
+<span class="n">a1</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
+
+<span class="k">assert</span> <span class="n">a1</span> <span class="ow">is</span> <span class="n">a2</span>
+</pre></div>
+<h3><span class="mw-headline" id="Visual_Basic._NET">Visual Basic. NET</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=14" title="Editar sección: Visual Basic. NET">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Una implementación del patrón singleton en <a href="/wiki/Visual_Basic_.NET" title="Visual Basic .NET">Visual Basic .NET</a> es la siguiente:
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre><span></span><span class="k">Public</span> <span class="k">Class</span> <span class="nc">Singleton</span>
+
+    <span class="k">Private</span> <span class="k">Sub</span> <span class="nf">New</span><span class="p">()</span> <span class="c">&#39;CONSTRUCTOR</span>
+    <span class="k">End</span> <span class="k">Sub</span>
+
+    <span class="k">Private</span> <span class="k">Shared</span> <span class="n">instancia</span> <span class="ow">As</span> <span class="n">Singleton</span> <span class="o">=</span> <span class="k">Nothing</span>
+
+    <span class="k">Public</span> <span class="k">Shared</span> <span class="k">Function</span> <span class="nf">getInstancia</span> <span class="ow">As</span> <span class="n">Singleton</span>
+            <span class="k">If</span> <span class="n">instancia</span> <span class="ow">Is</span> <span class="k">Nothing</span> <span class="k">Then</span>
+                <span class="n">instancia</span> <span class="o">=</span> <span class="k">New</span> <span class="n">Singleton</span><span class="p">()</span>
+            <span class="k">End</span> <span class="k">If</span>
+            <span class="k">Return</span> <span class="n">instancia</span>
+    <span class="k">End</span> <span class="k">Function</span>
+<span class="k">End</span> <span class="k">Class</span>
+</pre></div>
+<h2><span class="mw-headline" id="Patrones_relacionados">Patrones relacionados</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=15" title="Editar sección: Patrones relacionados">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Abstract_Factory_(patr%C3%B3n_de_dise%C3%B1o)" class="mw-redirect" title="Abstract Factory (patrón de diseño)">Abstract Factory</a>: muchas veces son implementados mediante singleton, ya que normalmente deben ser accesibles públicamente y debe haber una única instancia que controle la creación de objetos.</li>
+<li><a href="/w/index.php?title=Monostate_(patr%C3%B3n_de_dise%C3%B1o)&amp;action=edit&amp;redlink=1" class="new" title="Monostate (patrón de diseño) (aún no redactado)">Monostate</a>: es similar al singleton, pero en lugar de controlar el instanciado de una clase, asegura que todas las instancias tengan un estado común, haciendo que todos sus miembros sean de clase.</li></ul>
+<h2><span class="mw-headline" id="Enlaces_externos">Enlaces externos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=16" title="Editar sección: Enlaces externos">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/15px-Wikibooks-logo.svg.png" width="15" height="15" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/23px-Wikibooks-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/30px-Wikibooks-logo.svg.png 2x" data-file-width="300" data-file-height="300" /> <a href="/wiki/Wikilibros" title="Wikilibros">Wikilibros</a> alberga un libro o manual sobre <b><a href="https://es.wikibooks.org/wiki/Manual_de_Ingenier%C3%ADa_Inform%C3%A1tica/Patrones_de_Comportamiento" class="extiw" title="b:Manual de Ingeniería Informática/Patrones de Comportamiento">Patrones de Comportamiento</a></b>.</li>
+<li><a rel="nofollow" class="external text" href="http://design-patterns-with-uml.blogspot.com.ar/2013/02/singleton-pattern.html">Patrón Singleton: explicación y modelo UML</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20031020152351/http://developer.java.sun.com/developer/qow/archive/111/">A Q&amp;A page</a> (java.sun.com)</li>
+<li><span class="broken-link"><a rel="nofollow" class="external text" href="http://pec.dev.java.net/">PEC(TM)</a></span> <span class="plainlinks" style="background-color: lightyellow; font-size:85%">(<a href="/wiki/Ayuda:C%C3%B3mo_recuperar_un_enlace_roto" title="Ayuda:Cómo recuperar un enlace roto">enlace roto</a> disponible en <a href="/wiki/Internet_Archive" title="Internet Archive">Internet Archive</a>; véase el <a rel="nofollow" class="external text" href="//web.archive.org/web/*/http://pec.dev.java.net/">historial</a> y la <a rel="nofollow" class="external text" href="//web.archive.org/web/2/http://pec.dev.java.net/">última versión</a>).</span>, compilador que garantiza la correcta instrumentación del patrón singleton y de otros patrones.</li>
+<li><a rel="nofollow" class="external text" href="http://www.dofactory.com/Patterns/PatternSingleton.aspx">Data&amp;Object Factory</a>, explicación e implementación en C# del patrón singleton.</li>
+<li><a rel="nofollow" class="external text" href="http://geeks.ms/blogs/lontivero/archive/2008/07/27/patterns-patr-243-n-singleton-explicado.aspx">Patrón Singleton explicado en video</a>, artículo de Lucas Ontivero donde explica mediante tres videos de 8 minutos 3 implementaciones del patrón Singleton en CSharp (nivel básico)</li></ul>
+<h2><span class="mw-headline" id="Referencias">Referencias</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Singleton&amp;action=edit&amp;section=17" title="Editar sección: Referencias">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="listaref" style="list-style-type: decimal;"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><span id="CITAREFCunningham_&amp;_Cunningham,_Inc." class="citation web">Cunningham &amp; Cunningham, Inc. (ed.). <a rel="nofollow" class="external text" href="http://c2.com/cgi/wiki?PerlSingleton">«Perl Singleton»</a> <span style="color:#555;">(en inglés)</span><span class="reference-accessdate">. Consultado el 4 de septiembre de 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fes.wikipedia.org%3ASingleton&amp;rft.btitle=Perl%0ASingleton&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fc2.com%2Fcgi%2Fwiki%3FPerlSingleton&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span>
+</li>
+</ol></div>
+
+<!-- 
+NewPP limit report
+Parsed by mw1327
+Cached time: 20181101221345
+Cache expiry: 1900800
+Dynamic content: false
+CPU time usage: 0.180 seconds
+Real time usage: 4.296 seconds
+Preprocessor visited node count: 332/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 2204/2097152 bytes
+Template argument size: 218/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 36022/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.015/10.000 seconds
+Lua memory usage: 1.09 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 4207.842      1 -total
+  0.62%   26.230      1 Plantilla:Listaref
+  0.62%   25.942      1 Plantilla:Otros_usos
+  0.54%   22.637      1 Plantilla:Texto_de_la_coletilla_del_título
+  0.53%   22.289      1 Plantilla:Cita_web
+  0.08%    3.327      1 Plantilla:Wikibooks
+  0.05%    2.040      1 Plantilla:Enlace_roto
+-->
+
+<!-- Saved in parser cache with key eswiki:pcache:idhash:55325-0!canonical and timestamp 20181101221341 and revision id 111190596
+ -->
+</div><noscript><img src="//es.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtenido de «<a dir="ltr" href="https://es.wikipedia.org/w/index.php?title=Singleton&amp;oldid=111190596">https://es.wikipedia.org/w/index.php?title=Singleton&amp;oldid=111190596</a>»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categor%C3%ADas" title="Especial:Categorías">Categoría</a>: <ul><li><a href="/wiki/Categor%C3%ADa:Patrones_de_dise%C3%B1o" title="Categoría:Patrones de diseño">Patrones de diseño</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Categoría oculta: <ul><li><a href="/wiki/Categor%C3%ADa:Wikipedia:Art%C3%ADculos_con_enlaces_externos_rotos" title="Categoría:Wikipedia:Artículos con enlaces externos rotos">Wikipedia:Artículos con enlaces externos rotos</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menú de navegación</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Herramientas personales</h3>
+						<ul>
+							<li id="pt-anonuserpage">No has accedido</li><li id="pt-anontalk"><a href="/wiki/Especial:MiDiscusi%C3%B3n" title="Discusión sobre ediciones hechas desde esta dirección IP [n]" accesskey="n">Discusión</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:MisContribuciones" title="Una lista de modificaciones hechas desde esta dirección IP [y]" accesskey="y">Contribuciones</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Crear_una_cuenta&amp;returnto=Singleton" title="Te recomendamos crear una cuenta e iniciar sesión; sin embargo, no es obligatorio">Crear una cuenta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Singleton" title="Te recomendamos iniciar sesión, aunque no es obligatorio [o]" accesskey="o">Acceder</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espacios de nombres</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/wiki/Singleton" title="Ver la página de contenido [c]" accesskey="c">Artículo</a></span></li><li id="ca-talk"><span><a href="/wiki/Discusi%C3%B3n:Singleton" rel="discussion" title="Discusión acerca de la página [t]" accesskey="t">Discusión</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variantes</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/wiki/Singleton">Leer</a></span></li><li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=Singleton&amp;action=edit" title="Editar esta página [e]" accesskey="e">Editar</a></span></li><li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Singleton&amp;action=history" title="Versiones anteriores de esta página [h]" accesskey="h">Ver historial</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>Más</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Buscar</label>
+						</h3>
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Buscar en Wikipedia" title="Buscar en este wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Buscar" name="title"/><input type="submit" name="fulltext" value="Buscar" title="Busca páginas con este texto." id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir a la página con este nombre exacto si existe" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikipedia:Portada"  title="Visitar la página principal"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navegación</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Wikipedia:Portada" title="Visitar la página principal [z]" accesskey="z">Portada</a></li><li id="n-portal"><a href="/wiki/Portal:Comunidad" title="Acerca del proyecto, lo que puedes hacer, dónde encontrar información">Portal de la comunidad</a></li><li id="n-currentevents"><a href="/wiki/Portal:Actualidad" title="Encuentra información de contexto sobre acontecimientos actuales">Actualidad</a></li><li id="n-recentchanges"><a href="/wiki/Especial:CambiosRecientes" title="Lista de cambios recientes en el wiki [r]" accesskey="r">Cambios recientes</a></li><li id="n-newpages"><a href="/wiki/Especial:P%C3%A1ginasNuevas">Páginas nuevas</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleatoria" title="Cargar una página al azar [x]" accesskey="x">Página aleatoria</a></li><li id="n-help"><a href="/wiki/Ayuda:Contenidos" title="El lugar para aprender">Ayuda</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_es.wikipedia.org&amp;uselang=es" title="Apóyanos">Donaciones</a></li><li id="n-bug_in_article"><a href="/wiki/Wikipedia:Informes_de_error">Notificar un error</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Imprimir/exportar</h3>
+			<div class="body">
+								<ul>
+					<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Libro&amp;bookcmd=book_creator&amp;referer=Singleton">Crear un libro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:ElectronPdf&amp;page=Singleton&amp;action=show-download-screen">Descargar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Singleton&amp;printable=yes" title="Versión imprimible de esta página [p]" accesskey="p">Versión para imprimir</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-wikibase-otherprojects" aria-labelledby="p-wikibase-otherprojects-label">
+			<h3 id="p-wikibase-otherprojects-label">En otros proyectos</h3>
+			<div class="body">
+								<ul>
+					<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Singleton_pattern" hreflang="en">Wikimedia Commons</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Herramientas</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Especial:LoQueEnlazaAqu%C3%AD/Singleton" title="Lista de todas las páginas del wiki que enlazan aquí [j]" accesskey="j">Lo que enlaza aquí</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:CambiosEnEnlazadas/Singleton" rel="nofollow" title="Cambios recientes en las páginas que enlazan con esta [k]" accesskey="k">Cambios en enlazadas</a></li><li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es" title="Subir archivos [u]" accesskey="u">Subir archivo</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginasEspeciales" title="Lista de todas las páginas especiales [q]" accesskey="q">Páginas especiales</a></li><li id="t-permalink"><a href="/w/index.php?title=Singleton&amp;oldid=111190596" title="Enlace permanente a esta versión de la página">Enlace permanente</a></li><li id="t-info"><a href="/w/index.php?title=Singleton&amp;action=info" title="Más información sobre esta página">Información de la página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q746699" title="Enlace al elemento conectado del repositorio de datos [g]" accesskey="g">Elemento de Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Singleton&amp;id=111190596" title="Información sobre cómo citar esta página">Citar esta página</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">En otros idiomas</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A1%D0%B5%D0%BA_(%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD)" title="Сек (шаблон) (búlgaro)" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Patr%C3%B3_singleton" title="Patró singleton (catalán)" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Singleton" title="Singleton (checo)" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Singleton_(Entwurfsmuster)" title="Singleton (Entwurfsmuster) (alemán)" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Singleton_pattern" title="Singleton pattern (inglés)" lang="en" hreflang="en" class="interlanguage-link-target">English</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%84%DA%AF%D9%88%DB%8C_%DB%8C%DA%AF%D8%A7%D9%86%D9%87" title="الگوی یگانه (persa)" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Singleton" title="Singleton (finés)" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Singleton_(patron_de_conception)" title="Singleton (patron de conception) (francés)" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Singleton" title="Singleton (gallego)" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A1%D7%99%D7%A0%D7%92%D7%9C%D7%98%D7%95%D7%9F_(%D7%AA%D7%91%D7%A0%D7%99%D7%AA_%D7%A2%D7%99%D7%A6%D7%95%D7%91)" title="סינגלטון (תבנית עיצוב) (hebreo)" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Egyke_programtervez%C3%A9si_minta" title="Egyke programtervezési minta (húngaro)" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%B5%D5%A6%D5%A1%D5%AF%D5%AB_%D6%85%D5%A3%D5%BF%D5%A1%D5%A3%D5%B8%D6%80%D5%AE%D5%B4%D5%A1%D5%B6_(%D5%B6%D5%A1%D5%AD%D5%A1%D5%A3%D5%AE%D5%B4%D5%A1%D5%B6_%D5%B1%D6%87%D5%A1%D5%B6%D5%B4%D5%B8%D6%82%D5%B7)" title="Եզակի օգտագործման (նախագծման ձևանմուշ) (armenio)" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Singleton" title="Singleton (italiano)" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3" title="Singleton パターン (japonés)" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%8B%B1%EA%B8%80%ED%84%B4_%ED%8C%A8%ED%84%B4" title="싱글턴 패턴 (coreano)" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%B8%E0%B4%BF%E0%B4%82%E0%B4%97%E0%B5%BE%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%BA_%E0%B4%AA%E0%B4%BE%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B5%87%E0%B5%BA" title="സിംഗൾട്ടൺ പാറ്റേൺ (malayalam)" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Singleton_(ontwerppatroon)" title="Singleton (ontwerppatroon) (neerlandés)" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Singleton" title="Singleton (noruego)" lang="no" hreflang="no" class="interlanguage-link-target">Norsk</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Singleton_(wzorzec_projektowy)" title="Singleton (wzorzec projektowy) (polaco)" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Singleton" title="Singleton (portugués)" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B8%D0%BD%D0%BE%D1%87%D0%BA%D0%B0_(%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)" title="Одиночка (шаблон проектирования) (ruso)" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%A3%D0%BD%D0%B8%D0%BA%D0%B0%D1%82_(%D0%BF%D1%80%D0%BE%D1%98%D0%B5%D0%BA%D1%82%D0%BD%D0%B8_%D1%83%D0%B7%D0%BE%D1%80%D0%B0%D0%BA)" title="Уникат (пројектни узорак) (serbio)" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Singleton_(designm%C3%B6nster)" title="Singleton (designmönster) (sueco)" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%93%E0%AE%B0%E0%AF%81%E0%AE%B1%E0%AF%81%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81%E0%AE%95%E0%AF%8D_%E0%AE%95%E0%AF%8B%E0%AE%B2%E0%AE%AE%E0%AF%8D" title="ஓருறுப்புக் கோலம் (tamil)" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%8B%E0%B8%B4%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%B4%E0%B8%A5%E0%B8%95%E0%B8%B1%E0%B8%99%E0%B9%81%E0%B8%9E%E0%B8%95%E0%B9%80%E0%B8%97%E0%B8%B4%E0%B8%A3%E0%B9%8C%E0%B8%99" title="ซิงเกิลตันแพตเทิร์น (tailandés)" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Tekil_kal%C4%B1p" title="Tekil kalıp (turco)" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B8%D0%BD%D0%B0%D0%BA_(%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F)" title="Одинак (шаблон проектування) (ucraniano)" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Singleton_pattern" title="Singleton pattern (vietnamita)" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F" title="单例模式 (chino)" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li>				</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q746699#sitelinks-wikipedia" title="Editar enlaces interlingüísticos" class="wbc-editpage">Editar enlaces</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> Esta página se editó por última vez el 10 oct 2018 a las 18:54.</li>
+								<li id="footer-info-copyright">El texto está disponible bajo la <a rel="license" href="//es.wikipedia.org/wiki/Wikipedia:Texto_de_la_Licencia_Creative_Commons_Atribuci%C3%B3n-CompartirIgual_3.0_Unported">Licencia Creative Commons Atribución Compartir Igual 3.0</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+pueden aplicarse cláusulas adicionales. Al usar este sitio, usted acepta nuestros <a href="//wikimediafoundation.org/wiki/Terms_of_Use">términos de uso</a> y nuestra <a href="//wikimediafoundation.org/wiki/Privacy_policy">política de privacidad</a>. <br/>Wikipedia&reg; es una marca registrada de la <a href="//www.wikimediafoundation.org/">Fundación Wikimedia, Inc.</a>, una organización sin ánimo de lucro.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/es" class="extiw" title="m:Privacy policy/es">Política de privacidad</a></li>
+								<li id="footer-places-about"><a href="/wiki/Wikipedia:Acerca_de" title="Wikipedia:Acerca de">Acerca de Wikipedia</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:Limitaci%C3%B3n_general_de_responsabilidad" title="Wikipedia:Limitación general de responsabilidad">Limitación de responsabilidad</a></li>
+								<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Desarrolladores</a></li>
+								<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement/es">Declaración de cookies</a></li>
+								<li id="footer-places-mobileview"><a href="//es.m.wikipedia.org/w/index.php?title=Singleton&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versión para móviles</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.180","walltime":"4.296","ppvisitednodes":{"value":332,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":2204,"limit":2097152},"templateargumentsize":{"value":218,"limit":2097152},"expansiondepth":{"value":6,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":36022,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 4207.842      1 -total","  0.62%   26.230      1 Plantilla:Listaref","  0.62%   25.942      1 Plantilla:Otros_usos","  0.54%   22.637      1 Plantilla:Texto_de_la_coletilla_del_título","  0.53%   22.289      1 Plantilla:Cita_web","  0.08%    3.327      1 Plantilla:Wikibooks","  0.05%    2.040      1 Plantilla:Enlace_roto"]},"scribunto":{"limitreport-timeusage":{"value":"0.015","limit":"10.000"},"limitreport-memusage":{"value":1145337,"limit":52428800}},"cachereport":{"origin":"mw1327","timestamp":"20181101221345","ttl":1900800,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":100,"wgHostname":"mw1320"});});</script>
+	</body>
 </html>
